@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   consign = require('consign'),
@@ -8,9 +8,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 consign({cwd: 'api'})
-    .then('controllers')
-    .then('routes')
-    .into(app);
+  .then('services')
+  .then('controllers')
+  .then('routes')
+  .into(app);
 
 app.listen(port, function(){
     console.log(`RESTful API server started on port ${port}.`);
