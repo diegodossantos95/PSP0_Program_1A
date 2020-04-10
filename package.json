@@ -1,0 +1,30 @@
+{
+  "name": "psp_program",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "nodemon api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegodossantos95/PSP_Program.git"
+  },
+  "author": "Diego dos Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegodossantos95/PSP_Program/issues"
+  },
+  "homepage": "https://github.com/diegodossantos95/PSP_Program#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "nodemon": "^2.0.3",
+    "request": "^2.88.2",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1"
+  }
+}
