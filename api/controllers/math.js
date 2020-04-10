@@ -1,7 +1,7 @@
 module.exports = app => {
   const controller = {};
 
-  controller.calculate = (req, res) => {
+  controller.standardDeviation = (req, res) => {
     res.status(200).json({});
   };
 
