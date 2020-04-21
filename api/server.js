@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 consign({cwd: 'api'})
-  .then('services')
+  .include('services')
   .then('controllers')
   .then('routes')
   .into(app);

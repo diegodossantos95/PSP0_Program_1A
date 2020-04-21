@@ -1,6 +1,7 @@
 module.exports = app => {
   const controller = {};
   const standardDeviation = app.services.standardDeviation;
+  const mean = app.services.mean;
 
   controller.standardDeviation = (req, res) => {
     const numbers = req.body.numbers;
@@ -9,9 +10,14 @@ module.exports = app => {
       res.status(404).send("Incorrect body object format.");
     }
 
-    const stdDev = standardDeviation.calculate(numbers);
+    const stdDevValue = standardDeviation.calculate(numbers);
+    const meanValue = mean.calculate(numbers);
+    const result = {
+      "mean": meanValue,
+      "standardDeviation": stdDevValue
+  };
 
-    res.status(200).json(stdDev);
+    res.status(200).json(result);
   };
 
   return controller;
